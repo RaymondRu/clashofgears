@@ -1,0 +1,31 @@
+<template name = "HomePrivateNation">
+{{#if name}}
+	<ul>
+		<li>name: {{name}}</li>
+		<li>goldBonus: {{attributes.goldBonus}}</li>
+		<li>coalBonus: {{attributes.coalBonus}}</li>
+		<li>ironBonus: {{attributes.ironBonus}}</li>
+		<li>foodBonus: {{attributes.foodBonus}}</li>
+		<li>woodBonus: {{attributes.woodBonus}}</li>
+		<li>populationBonus: {{attributes.populationBonus}}</li>
+		<li>defenseBonus: {{attributes.defenseBonus}}</li>
+		<li>offenseBonus: {{attributes.offenseBonus}}</li>
+		<li>techBonus: {{attributes.technologyBonus}}</li>	
+		<li>spyBonus: {{attributes.spyBonus}}</li>
+		<li>counterIntelBonus: {{attributes.counterIntelBonus}}</li>			
+	</ul>	 
+{{else}}
+	{{> nationCreate}}
+{{/if}}
+</template>
+
+<template name = "nationCreate">
+	<div class="jumbotron">
+		<h3> Create your nation</h3>
+		<br>
+		<form class="nameNation form-inline">
+		    <input type="text" class="form-control" id="nation" placeholder="Nation Name">
+		  	<button type="submit" class="btn btn-primary"> Name</button>
+		</form>
+	</div>
+</template>
