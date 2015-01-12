@@ -1,0 +1,43 @@
+<template name="HomePrivate">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					Welcome {{userFullName}}!
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="menu" class="col-sm-3 col-md-2">
+				<h2>
+				</h2>
+				{{> PrivateSideMenu}}
+			</div>
+			<div id="subcontent" class="col-sm-9 col-md-10">
+				{{> yield region='PrivateSubcontent'}}
+			</div>
+		</div>		
+	</div>
+</template>
+
+<template name="PrivateSideMenu">
+	<ul id="menu-items" class="nav nav-stacked nav-pills">
+		<li id="menu-item-simple" class="{{menuItemClass 'user_settings.nation'}}">
+			<a href="{{pathFor 'home_private.nation'}}">
+				Nation
+			</a>
+		</li>	
+		<li id="menu-item-simple" class="{{menuItemClass 'user_settings.isuues'}}">
+			<a href="{{pathFor 'home_private.issues'}}">
+				Issues
+			</a>
+		</li>
+		<li id="menu-item-simple" class="{{menuItemClass 'user_settings.change_pass'}}">
+			<a href="{{pathFor 'home_private.change_password'}}">
+				Change password
+			</a>
+		</li>
+	</ul>
+</template>
