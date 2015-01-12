@@ -1,19 +1,38 @@
 <template name = "HomePrivateNation">
 {{#if name}}
-	<ul>
-		<li>name: {{name}}</li>
-		<li>goldBonus: {{attributes.goldBonus}}</li>
-		<li>coalBonus: {{attributes.coalBonus}}</li>
-		<li>ironBonus: {{attributes.ironBonus}}</li>
-		<li>foodBonus: {{attributes.foodBonus}}</li>
-		<li>woodBonus: {{attributes.woodBonus}}</li>
-		<li>populationBonus: {{attributes.populationBonus}}</li>
-		<li>defenseBonus: {{attributes.defenseBonus}}</li>
-		<li>offenseBonus: {{attributes.offenseBonus}}</li>
-		<li>techBonus: {{attributes.technologyBonus}}</li>	
-		<li>spyBonus: {{attributes.spyBonus}}</li>
-		<li>counterIntelBonus: {{attributes.counterIntelBonus}}</li>			
-	</ul>	 
+	<div class="row">
+		<div class = "col-md-5">
+			<ul>
+				<li>name: {{name}}</li>
+				<li>goldBonus: {{attributes.goldBonus}}</li>
+				<li>coalBonus: {{attributes.coalBonus}}</li>
+				<li>ironBonus: {{attributes.ironBonus}}</li>
+				<li>foodBonus: {{attributes.foodBonus}}</li>
+				<li>woodBonus: {{attributes.woodBonus}}</li>
+				<li>populationBonus: {{attributes.populationBonus}}</li>
+				<li>defenseBonus: {{attributes.defenseBonus}}</li>
+				<li>offenseBonus: {{attributes.offenseBonus}}</li>
+				<li>techBonus: {{attributes.technologyBonus}}</li>	
+				<li>spyBonus: {{attributes.spyBonus}}</li>
+				<li>counterIntelBonus: {{attributes.counterIntelBonus}}</li>			
+			</ul>
+		</div>
+		<div class = "col-md-5">
+			<ul>
+				<li> gold: {{resources.gold}} </li>
+				<li> wood: {{resources.wood}} </li>
+				<li> food: {{resources.food}} </li>
+				<li> iron: {{resources.iron}} </li>
+			</ul>
+			<hr>
+			<ul>
+				<li> wood Building: {{resourceBuildings.wood}} </li>
+				<li> food Building: {{resourceBuildings.food}} </li>
+				<li> iron Building: {{resourceBuildings.iron}} </li>				
+			</ul>
+		</div>		
+	</div>
+	 
 {{else}}
 	{{> nationCreate}}
 {{/if}}
